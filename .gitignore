@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Compiled class file
 *.class
 
@@ -26,6 +27,8 @@ hs_err_pid*
 =======
 =======
 >>>>>>> Initial commit
+=======
+>>>>>>> First commit
 *.iml
 .gradle
 /local.properties
@@ -44,6 +47,8 @@ hs_err_pid*
 >>>>>>> First commit
 =======
 =======
+=======
+>>>>>>> First commit
 # Compiled class file
 *.class
 
@@ -67,5 +72,27 @@ hs_err_pid*
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+<<<<<<< HEAD
 >>>>>>> Initial commit
+<<<<<<< HEAD
 >>>>>>> Initial commit
+=======
+=======
+=======
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+>>>>>>> First commit
+>>>>>>> First commit
+>>>>>>> First commit
