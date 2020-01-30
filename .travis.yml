@@ -1,4 +1,32 @@
-language: java
+language: android
+dist: trusty
+android:
+  components:
+    - tools
+    - platform-tools
+    - build-tools-25.0.2
+    - android-25
+install:
+    - true
+script:
+    - ./gradlew build
+before_script:
+#  - echo no | android create avd --force --name test -k "system-images;android-21;google_apis;armeabi-v7a" --abi google_apis/armeabi-v7a
+#  - emulator -avd test -no-skin -no-audio -no-window -gpu off &
+#  - travis_wait 40 android-wait-for-emulator
+#  - adb shell input keyevent 82 &
+before_install:
+  - chmod +x gradlew
+  - mkdir "$ANDROID_HOME/licenses" || true
+  - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
+  - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
+  - yes | sdkmanager "system-images;android-21;google_apis;armeabi-v7a" > /dev/null
+  - yes | sdkmanager --update > /dev/null
+  - yes | sdkmanager --licenses > /dev/null
+#env:
+#  global:
+    # wait up to 20 minutes for adb to connect to emulator
+#    - ADB_INSTALL_TIMEOUT=20
 after_success:
   - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
   - chmod +x send.sh
